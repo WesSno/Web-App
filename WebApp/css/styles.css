@@ -1,7 +1,7 @@
 body{
     margin:0;
     text-align: center;
-    background-color: #B8FFF9;
+    background-image: linear-gradient(to right, #c2e59c, #64b3f4)
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .intro{
