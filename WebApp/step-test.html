@@ -9,28 +9,36 @@
     <link rel="icon" href="favicon.ico">
 </head>
 <body>
-    <h2>Step Test Analysis</h2>
-    <p class=>Cooper Jacob Equation: s = BQ + CQ<sup>2</sup></p>
-    <p class=>SWL = static water level</p>
-    <p>Q = discharge</p>
-    <p>Smax = available drawdown</p>
+    <h1 class="head1">Step Test Analysis</h1>
+    <p class="text">Cooper Jacob Equation: s = BQ + CQ<sup>2</sup></p>
+    <p class="text">SWL = static water level</p>
+    <p class="text">Q = discharge</p>
+    <p class="text">Smax = available drawdown</p>
 
     <form action="">
         <label class="label">SWL:</label>
-        <input type="number"><br>
+        <input type="numeric"><br>
         <br>
         <label for="">Pump Setting:</label>
-        <input type="number"><br>
+        <input type="numeric"><br>
         <br>
         <label for="">Buffer:</label>
-        <input type="number"><br>
+        <input type="numeric"><br>
         <br>
         <label for="">Sheetname:</label>
         <input type="text"><br>
         <br>
         <label for="">File:</label>
-        <input type="file" name="" id="">
+        <input type="file" name="" id=""><br>
+        <br>
+        <button onclick="doSomething()" class="calc_button">Calculate</button>
     </form>
+    
+    <script>
+        function doSomething(){
+
+        }
+    </script>
    
 </body>
 </html>
