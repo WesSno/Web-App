@@ -9,31 +9,39 @@
     <link rel="icon" href="favicon.ico">
 </head>
 <body>
-    <h1>Maximum Potential Yield</h1>
+    <h1 class="head1">Maximum Potential Yield</h1>
     <p>Van Tonder Equation = (Qt/Qm) = (St/Sm) </p>
-    <p class=>SWL = Static Water Level</p>
-    <p>DWL = Dynamic Water Level</p>
-    <p>Qtest = Discharge</p>
-    <p>Qmax = Borehole Yield</p>
-    <p>Smax = Available Drawdown</p>
-    <p>Stest = Maximum Drawdown</p>
+    <p class="text">SWL = Static Water Level</p>
+    <p class="text">DWL = Dynamic Water Level</p>
+    <p class="text">Qtest = Discharge</p>
+    <p class="text">Qmax = Borehole Yield</p>
+    <p class="text">Smax = Available Drawdown</p>
+    <p class="text">Stest = Maximum Drawdown</p>
 
     <form action="">
         <label class="label">SWL:</label>
-        <input type="number"><br>
+        <input type="numeric"><br>
         <br>
         <label for="">Last DWL:</label>
-        <input type="number"><br>
+        <input type="numeric"><br>
         <br>
         <label for="">Pump Setting:</label>
-        <input type="number"><br>
+        <input type="numeric"><br>
         <br>
         <label for="">Qtest</label>
         <input type="text"><br>
         <br>
         <label for="">Buffer:</label>
-        <input type="number">
+        <input type="numeric"><br>
+        <br>
+        <button onclick="doSomething()" class="calc_button">Calculate</button>
     </form>
+    
+    <script>
+         function doSomething(){
+
+         }
+    </script>
     
 </body>
 </html>
