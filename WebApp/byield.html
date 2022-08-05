@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,41 +8,61 @@
     <title>Borehole Yield</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css2/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap.min.js">
 </head>
+
 <body>
-    <h1 class="head1">Maximum Potential Yield</h1>
-    <p>Van Tonder Equation = (Qt/Qm) = (St/Sm) </p>
-    <p class="text">SWL = Static Water Level</p>
-    <p class="text">DWL = Dynamic Water Level</p>
-    <p class="text">Qtest = Discharge</p>
-    <p class="text">Qmax = Borehole Yield</p>
-    <p class="text">Smax = Available Drawdown</p>
-    <p class="text">Stest = Maximum Drawdown</p>
+    <section id="byield">
+        <div class="container-lg">
+            <div class="row my-5 align-items-center justify-content-center">
+                <div class="col-8 col-lg-4 col-xl-6">
+                    <div class="card" style="width:680px">
+                        <div class="card-body">
+                            <h1 class="head1">Maximum Potential Yield</h1>
+                            <p class="text">Van Tonder Equation = (Qt/Qm) = (St/Sm)</p>
+                            <p class="text">SWL = Static Water Level</p>
+                            <p class="text">DWL = Dynamic Water Level</p>
+                            <p class="text">Qtest = Discharge</p>
+                            <p class="text">Qmax = Borehole Yield</p>
+                            <p class="text">Smax = Available Drawdown</p>
+                            <p class="text">Stest = Maximum Drawdown</p>
 
-    <form action="">
-        <label class="label">SWL:</label>
-        <input type="numeric"><br>
-        <br>
-        <label for="">Last DWL:</label>
-        <input type="numeric"><br>
-        <br>
-        <label for="">Pump Setting:</label>
-        <input type="numeric"><br>
-        <br>
-        <label for="">Qtest</label>
-        <input type="text"><br>
-        <br>
-        <label for="">Buffer:</label>
-        <input type="numeric"><br>
-        <br>
-        <button onclick="doSomething()" class="calc_button">Calculate</button>
-    </form>
-    
+                            <form action="">
+                                <label class="label">SWL:</label>
+                                <input type="numeric"><br>
+                                <br>
+                                <label for="">Last DWL:</label>
+                                <input type="numeric"><br>
+                                <br>
+                                <label for="">Pump Setting:</label>
+                                <input type="numeric"><br>
+                                <br>
+                                <label for="">Qtest</label>
+                                <input type="numeric"><br>
+                                <br>
+                                <label for="">Buffer:</label>
+                                <input type="numeric"><br>
+                                <br>
+                                <button onclick="doSomething()" class="btn btn-light">Calculate</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
     <script>
-         function doSomething(){
+        function doSomething() {
 
-         }
+        }
     </script>
-    
+
+
 </body>
+
 </html>
