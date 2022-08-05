@@ -1,5 +1,6 @@
+
 body{
-   margin:0;
+    margin:0;
     text-align: center;
     background-image: url("pump_test.jpg");
     background-size: 130%;
@@ -11,7 +12,8 @@ body{
     position: relative;
     bottom: 50px;
     font-size: 120px;
-    color: blue;    
+    color: blue;
+    
 }
 
 
@@ -33,11 +35,13 @@ hr{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 565px;
     color: black;
+    
 }
 
 .Def{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: bolder;
+}
 
 img{
     width: 230px;
@@ -58,7 +62,7 @@ img{
     position: relative;
     left: 40px;
     top: 10px;
-    }
+}
 
 
 .last-head{
@@ -66,7 +70,9 @@ img{
 }
 a{
     background-color: #CA4246;
-    background-image: linear-gradient(
+  
+    /* Create the gradient. */
+     background-image: linear-gradient(
           45deg,
           #CA4246 16.666%, 
           #E16541 16.666%, 
@@ -78,14 +84,24 @@ a{
           #476098 66.666%, 
           #476098 83.333%, 
           #A7489B 83.333%);
+    
+    /* Set the background size and repeat properties. */
     background-size: 100%;
     background-repeat: repeat;
+  
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
-    }
+    -webkit-text-fill-color: transparent; 
+    
+    /* Animate the text when loading the element. */
+      /* This animates it on page load and when hovering out. */
+      animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+}
+
 a:hover{
     animation: rainbow-text-simple-animation 0.75s ease-in forwards;
-    }
+}
 @keyframes rainbow-text-simple-animation-rev {
     0% {
         background-size: 650%;
@@ -97,6 +113,9 @@ a:hover{
         background-size: 100%;
     }
 }
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
 @keyframes rainbow-text-simple-animation {
     0% {
         background-size: 100%;
@@ -108,18 +127,37 @@ a:hover{
         background-size: 650%;
     }
 }
-    
+
 .head1{
-    background-color: #f3ec78;
-    background-image: linear-gradient(45deg, #F0F2F0, #000C40);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
-    text-decoration: none;
-    font-weight: bolder;
+    display: inline-block;
+    background-color: #CA4246;
+  
+     background-image: linear-gradient(
+          45deg,
+          #CA4246 16.666%, 
+          #E16541 16.666%, 
+          #E16541 33.333%, 
+          #F18F43 33.333%, 
+          #F18F43 50%, 
+          #8B9862 50%, 
+          #8B9862 66.666%, 
+          #476098 66.666%, 
+          #476098 83.333%, 
+          #A7489B 83.333%);
     
+    background-size: 100%;
+    background-repeat: repeat;
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    
+      animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+}
+
+.head1:hover{
+    animation: rainbow-text-simple-animation 0.75s ease-in forwards;
+}
+
 
 label{
     display: inline-block;
@@ -127,13 +165,13 @@ label{
     background-image: white;
     font-weight: bolder;
 }
-    
+
 .calc_button{
     background-color: black;
     border-radius: 5px;
     color: white;
-    margin-left: 395px;
-    }
+    
+}
 .calc_button:hover{
     background-image: linear-gradient(to right, #2C3E50, #4CA1AF);
 }
@@ -150,3 +188,4 @@ label{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: bolder;
 }
+
