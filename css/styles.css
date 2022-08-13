@@ -1,0 +1,252 @@
+.navbar{
+    padding-left: 70px;
+    padding-right: 100px;
+    padding-bottom: 0rem;
+    padding-top: 0%;
+}
+
+.navbar-brand{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo-img{
+    width: 150px;
+    height: 90px;
+    transform: rotate(0);
+    padding-left: 40px;
+    padding-bottom: 1px;
+    padding-top: 5px;
+}
+
+@media (max-width: 1028px){
+    .logo-img{
+        display: none;
+        visibility: hidden;
+        position: absolute;
+        z-index: -1;
+        }
+}
+
+.nav-item{
+    padding: 0 18px;
+}
+
+.nav-link{
+    font-size: 1.2rem;
+
+}
+
+
+.logo-col{
+    color: aqua;
+}
+
+#about {
+    background: rgba(0,0,0,0.8)url("pump_test.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    color: white;
+    margin-top: 100px;
+    padding-top: 3%;
+    padding-bottom: 10%;
+}
+
+.App-col{
+    color: aqua;
+}
+
+
+.container-fluid2{
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+.name{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.5;
+    size: 3rem;
+    margin-top: 5%;
+}
+
+.title-img{
+    filter: brightness(45%);
+    width: 450px;
+    height: 450px;
+    margin-top: 5%;
+    padding: 3% 10%;
+    transform: rotate(15deg);
+}
+
+#step-test{
+    background-color: white;
+    padding: 7% 15%;
+
+}
+
+@media (max-width: 1028px) {
+    #step-test{
+        padding: 15% 15%;
+    }
+    
+}
+
+.s-d{
+    font-size: large;
+    line-height: 1.5;
+}
+
+.card{
+    margin-top: 30%;
+    margin-bottom: 30%;
+
+}
+
+.card-img-top{
+    height: 20vw;
+    object-fit:cover;
+    transform: rotate(0deg);
+    padding: 0%;
+}
+
+#byield{
+    background: rgba(0,0,0,0.8)url("yield.jfif");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    padding: 20% 15%;
+    color: white;
+}
+
+.p_anch{
+    display: inline-block;
+}
+
+@media (max-width: 1028px) {
+    .title-img{
+        position: static;
+        transform: rotate(0);
+    }
+
+    .navbar-brand{
+        text-transform: uppercase;
+        color: aqua;
+    }
+}
+
+
+#footer{
+    background-color: #CDF0EA;
+    padding: 7% 15%;
+    text-align: center;
+}
+
+.social-icon{
+    margin: 20px 10px;
+}
+
+.copyright{
+    color: grey;
+    font-weight: bolder; 
+}
+
+label {
+    display: inline-block;
+    width: 240px;
+    background-image: white;
+    font-weight: bolder;
+}
+
+#steptest_body{
+    background-image: url("step_img.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#yield_body{
+    background-image: url("yield_img.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#contact_body{
+    background-image: url("call_center.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card_step{
+    margin-top: 30%;
+    margin-bottom: 30%;
+}
+
+.card_yield{
+    margin-top: 30%;
+    margin-bottom: 30%;
+}
+
+.card_contacts{
+    margin-top: 30%;
+    margin-bottom: 30%;
+}
+
+#webApp_body{
+    background: rgba(0,0,0,0.8)url("pump_test.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    color: white;
+    margin-top: 10px;
+    padding-top: 3%;
+    padding-bottom: 10%;
+    font-size: large;
+    line-height: 1.5;
+}
+
+#about0{
+    
+}
+
+#py_body{
+    background: rgba(0,0,0,0.8)url("yield_img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    color: white;
+    margin-top: 10px;
+    padding-top: 3%;
+    padding-bottom: 10%;
+    font-size: large;
+    line-height: 1.5;
+}
+
+.safe_yield{
+    color: aqua;
+}
+
+.twitter_col{
+    color: aqua;
+}
+
+.instagram_col{
+    color:crimson;
+}
+
+.email_col{
+    color: red;
+}
+
+
