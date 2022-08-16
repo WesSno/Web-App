@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borehole Web Applicatioin</title>
+    <link rel="icon" href="static/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="static/bootstrap/js/bootstrap.js">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/font-6/css/all.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+</head>
+
+<body id="webApp_body">
+    <section id="home">
+        <nav class="navbar fixed-top navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href={{ url_for('home') }} >
+                    <img src="static/images/waterlogo-modified.png" alt="logo"
+                        class="logo-img d-inline-block align-text-center">
+                    De<span class="logo-col">Yield</span> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href={{ url_for('home') }} >Home</a>
+                        </li>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section id="about0">
+        <div class="container-fluid2">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="name">Borehole Analysis Web App</h1>
+                    <p>Pumping Test is a long and boring process coupled with difficult calculations to analyse the data
+                        obatined from the test. This can make carrying out the test in the right procedure quite a
+                        challenge as it takes up too much time.</p>
+                    <P>Therefore, this web application aims to shorten the time involved by making the analysis stage as
+                        simple as possible. All that is needed is data from the pumping test and the analysis stage is
+                        made easier and simple.</P>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+</body>
+
+</html>

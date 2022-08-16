@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum Potential Yield</title>
+    <link rel="icon" href="static/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="static/bootstrap/js/bootstrap.js">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/font-6/css/all.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+</head>
+
+<body id="yield_body">
+
+
+    <section id="home">
+        <nav class="navbar fixed-top navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href={{ url_for('home') }}>
+                    <img src="static/images/waterlogo-modified.png" alt="logo"
+                        class="logo-img d-inline-block align-text-center">
+                    De<span class="logo-col">Yield</span> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href={{ url_for('home') }}>Home</a>
+                        </li>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section id="b_yield">
+        <div class="container-fluid">
+            <div class="row my-5 align-items-center justify-content-center">
+                <div class="col-8 col-lg-4 col-xl-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="head1">Maximum Potential Yield</h1>
+                            <p class="text">Van Tonder Equation = (Qt/Qm) = (St/Sm)</p>
+                            <p class="text">SWL = Static Water Level</p>
+                            <p class="text">DWL = Dynamic Water Level</p>
+                            <p class="text">Qtest = Discharge</p>
+                            <p class="text">Qmax = Borehole Yield</p>
+                            <p class="text">Smax = Available Drawdown</p>
+                            <p class="text">Stest = Maximum Drawdown</p>
+
+                            <form action="/byield.html" method="post">
+                                <label class="label">SWL:</label>
+                                <input type="numeric" name="SWL" required><br>
+                                <br>
+                                <label for="">Last DWL:</label>
+                                <input type="numeric" name="Last DWL" required><br>
+                                <br>
+                                <label for="">Pump Setting:</label>
+                                <input type="numeric" name="P_setting" required><br>
+                                <br>
+                                <label for="">Qtest</label>
+                                <input type="numeric" name="Qtest" required><br>
+                                <br>
+                                <label for="">Buffer:</label>
+                                <input type="numeric" name="Buffer" required><br>
+                                <br>
+                                <button type="submit" class="btn btn-light">Calculate</button>
+                            </form>
+                            <h4 style="text-align: center; color: red;">{{failure}}</h4>
+                            <p style="text-align: center;">Qmax: {{ Q }}</p>
+                            <p style="text-align: center;">Smax: {{ S_m }}</p>
+                            <p style="text-align: center;">Stest: {{ S_m }}</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+      </script>
+</body>
+
+</html>
