@@ -1,7 +1,9 @@
+from fileinput import filename
 from flask import Flask, render_template, request
 import pandas as pd
 import numpy as np
 import os
+import time
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from sklearn.metrics import r2_score
@@ -25,13 +27,17 @@ def step_test():
             return render_template("step_test.html", failure="Please enter values in the value fields")
         else:
             s_max = Pump_settings - SWL - Buffer_
-
-            filename = request.form["Filename"]
             sheet_name = request.form["Sheetname"]
+            file = request.files["Filename"]
 
-            if len(filename) > 0 and len(sheet_name) > 0:
+            if len(sheet_name) > 0 and len(file.filename) > 0:
                 try:
-                    data = pd.read_excel(filename, sheet_name=sheet_name)
+                    file_path = os.path.join('static', file.filename)
+                    file.save(file_path)
+
+                    time.sleep(2)
+
+                    data = pd.read_excel(file_path, sheet_name=sheet_name)
                 except FileNotFoundError:
                     return render_template("step_test.html", failure="File Not Found")
                 else:
@@ -71,6 +77,8 @@ def step_test():
 
                     image = plt.savefig(output_path)
 
+                    time.sleep(2)
+                    
                     return render_template("step_test.html", image_filename=output_filename, Q=Q_, Q_max=Q_max, image=image)
     else:
         return render_template("step_test.html")
@@ -92,8 +100,8 @@ def byield():
 
             S_test =  Last_DWL - SWL
 
-            Q_max = (Q_test / S_test ) * S_max
-            values = [Q_max, S_max, S_test]
+            Q_max = round((Q_test / S_test ) * S_max, 4)
+            
             return render_template("byield.html", Q=Q_max, S_t=S_test, S_m=S_max)
     else:
         return render_template("byield.html")
