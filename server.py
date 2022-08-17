@@ -9,6 +9,7 @@ from scipy.optimize import curve_fit
 from sklearn.metrics import r2_score
 from sympy import Symbol, solve, Eq
 
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -56,8 +57,7 @@ def step_test():
                     s_hat = fxn(q_values, *popt)
                     plt.plot(q_values, s_hat, "r--", lw=1)
                     text = f"$y={popt[0]:0.4f}\;x^2{popt[1]:+0.4f}\;x$\n$R^2 = {r2_score(s_values, s_hat):0.3f}$"
-                    plt.gca().text(0.05, 0.95, text, transform=plt.gca().transAxes,
-                                   fontsize=14, verticalalignment='top')
+                    plt.gca().text(0.05, 0.95, text, transform=plt.gca().transAxes, fontsize=14, verticalalignment='top')
                     plt.grid()
 
                     #Calculating for Qm using the symbols module
@@ -66,20 +66,20 @@ def step_test():
                     roots = solve(equation, Qm)
                     positive_roots = roots[1]
 
-                    Q_ = f"Q = {round(positive_roots, 1)}L/mins"
+                    Q_ = str(round(positive_roots, 1))+"L/mins"
 
                     q_max = positive_roots * 1.44
 
-                    Q_max = f"Qm = {round(q_max, 1)}m\u00b3/day"
+                    Q_max = str(round(q_max, 1)) + "m\u00b3/day"
 
                     output_filename = "image.png"
                     output_path = os.path.join('static', output_filename)
 
-                    image = plt.savefig(output_path)
+                    plt.savefig(output_path)
 
                     time.sleep(2)
-                    
-                    return render_template("step_test.html", image_filename=output_filename, Q=Q_, Q_max=Q_max, image=image)
+
+                    return render_template("step_test.html", image_filename=output_path, Q=Q_, Q_max=Q_max, width=500, height=300)
     else:
         return render_template("step_test.html")
 
