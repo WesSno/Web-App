@@ -1,4 +1,3 @@
-from fileinput import filename
 from flask import Flask, render_template, request
 import pandas as pd
 import numpy as np
