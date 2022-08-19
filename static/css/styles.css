@@ -1,3 +1,9 @@
+html,body {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+
 .navbar{
     padding-left: 70px;
     padding-right: 100px;
@@ -215,9 +221,6 @@ label {
     line-height: 1.5;
 }
 
-#about0{
-    
-}
 
 #py_body{
     background: rgba(0,0,0,0.8)url("yield_img.jpg");
@@ -249,4 +252,31 @@ label {
     color: red;
 }
 
+@media (max-width: 1028px) {
+    .card-img-top{
+        height: 100%;
+        object-fit:cover;
+        transform: rotate(0deg);
+        padding: 0%;
+    }
+}
+
+@media (max-width:500px) {
+    .title-img{
+        width: 350px;
+    }
+}
+
+@media (max-width:280px){
+    .title-img{
+        width: 250px;
+    }
+}
+
+@media (max-width: 1028px) {
+    .step_img{
+        width:50vw;
+    }
+
+}
 
